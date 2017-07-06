@@ -14,8 +14,8 @@
     <h3>Nhập thông tin :</h3>
     <ol class="round">
         
-        <li class="one">
-            <h5>Chi tiết hóa đơn</h5>
+        <li style="color:blue;" class="one">
+            <h5 style="color:blue;">Chi tiết hóa đơn</h5>
             <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Ma_Chi_Tiet_Hoa_Don" DataSourceID="SqlDataSource1">
                 <Fields>
                     <asp:BoundField DataField="Ma_Chi_Tiet_Hoa_Don" HeaderText="Ma_Chi_Tiet_Hoa_Don" ReadOnly="True" SortExpression="Ma_Chi_Tiet_Hoa_Don" />
@@ -51,7 +51,10 @@
             <h5>Hóa đơn</h5>
               <asp:DetailsView ID="DetailsView6" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Ma_Hoa_Don" DataSourceID="SqlDataSource2">
                   <Fields>
-                      <asp:BoundField DataField="Ma_Hoa_Don" HeaderText="Ma_Hoa_Don" ReadOnly="True" SortExpression="Ma_Hoa_Don" />
+                      <asp:BoundField DataField="Ma_Hoa_Don" HeaderText="Ma_Hoa_Don" ReadOnly="True" SortExpression="Ma_Hoa_Don" >
+                      <FooterStyle BackColor="#CC99FF" />
+                      <HeaderStyle Font-Bold="False" />
+                      </asp:BoundField>
                       <asp:BoundField DataField="Ma_Chi_Tiet_Hoa_Don" HeaderText="Ma_Chi_Tiet_Hoa_Don" SortExpression="Ma_Chi_Tiet_Hoa_Don" />
                       <asp:BoundField DataField="Ma_Khach_Hang" HeaderText="Ma_Khach_Hang" SortExpression="Ma_Khach_Hang" />
                       <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
