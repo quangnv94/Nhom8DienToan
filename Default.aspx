@@ -14,8 +14,8 @@
     <h3>Nhập thông tin :</h3>
     <ol class="round">
         
-        <li style="color:blue;" class="one">
-            <h5 style="color:blue;">Chi tiết hóa đơn</h5>
+        <li class="one">
+            <h5>Chi tiết hóa đơn</h5>
             <asp:DetailsView ID="DetailsView1" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Ma_Chi_Tiet_Hoa_Don" DataSourceID="SqlDataSource1">
                 <Fields>
                     <asp:BoundField DataField="Ma_Chi_Tiet_Hoa_Don" HeaderText="Ma_Chi_Tiet_Hoa_Don" ReadOnly="True" SortExpression="Ma_Chi_Tiet_Hoa_Don" />
@@ -23,7 +23,8 @@
                     <asp:BoundField DataField="Thoi_Gian" HeaderText="Thoi_Gian" SortExpression="Thoi_Gian" />
                     <asp:BoundField DataField="So_Luong" HeaderText="So_Luong" SortExpression="So_Luong" />
                     <asp:BoundField DataField="Ma_Hoa_Don" HeaderText="Ma_Hoa_Don" SortExpression="Ma_Hoa_Don" />
-                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
+                    <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" >
+                    </asp:CommandField>
                 </Fields>
             </asp:DetailsView>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" DeleteCommand="DELETE FROM [Chi_Tiet_Hoa_Don] WHERE [Ma_Chi_Tiet_Hoa_Don] = @Ma_Chi_Tiet_Hoa_Don" InsertCommand="INSERT INTO [Chi_Tiet_Hoa_Don] ([Ma_Chi_Tiet_Hoa_Don], [Ma_San_Pham], [Thoi_Gian], [So_Luong], [Ma_Hoa_Don]) VALUES (@Ma_Chi_Tiet_Hoa_Don, @Ma_San_Pham, @Thoi_Gian, @So_Luong, @Ma_Hoa_Don)" SelectCommand="SELECT [Ma_Chi_Tiet_Hoa_Don], [Ma_San_Pham], [Thoi_Gian], [So_Luong], [Ma_Hoa_Don] FROM [Chi_Tiet_Hoa_Don]" UpdateCommand="UPDATE [Chi_Tiet_Hoa_Don] SET [Ma_San_Pham] = @Ma_San_Pham, [Thoi_Gian] = @Thoi_Gian, [So_Luong] = @So_Luong, [Ma_Hoa_Don] = @Ma_Hoa_Don WHERE [Ma_Chi_Tiet_Hoa_Don] = @Ma_Chi_Tiet_Hoa_Don">
@@ -137,7 +138,7 @@
         </li>
         <hr />
          <li class="five">
-            <h5>Sản phẩm</h5>
+            <h5 style="color:red">Sản phẩm</h5>
            
             <asp:DetailsView ID="DetailsView4" runat="server" Height="50px" Width="125px" AllowPaging="True" AutoGenerateRows="False" DataKeyNames="Ma_San_Pham" DataSourceID="SqlDataSource5">
                 <Fields>
